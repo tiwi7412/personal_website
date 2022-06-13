@@ -81,62 +81,10 @@ app.get('/', function(req, res) {
 	});
 });
 
-// registration page
-app.get('/register', function(req, res) {
-	res.render('pages/register',{
-		my_title:"Registration Page"
-	});
-});
 
-// Login page
-app.get('/login', function(req, res) {
-	res.render('pages/login',{
-		my_title:"Login Page"
-	});
-});
 
-//Page to get users name
-app.get('/name', function(req, res) {
-	res.render('pages/name',{
-		my_title:"Name Page"
-	});
-});
-/*
-app.post('/name/add_name',function(req,res){
-
-	var name = req.body.name;
-
-	var insert_statement = "INSERT INTO names(fname) VALUES('" + name + "') ON CONFLICT DO NOTHING;";
-
-	var names = 'select * from names;';
-
-	db.task('post-game-data', task => {
-        return task.batch([
-            task.any(insert_statement),
-						task.any(names)
-        ]);
-    })
-	.then(data => {
-		res.render('pages/Main_Menu',{
-			my_title:"Main Menu",
-			names: data[1],
-		})
-	})
-	.catch(err => {
-		console.log('Uh Oh I made an oopsie');
-		req.flash('error', err);
-		res.render('pages/names',{
-			my_title: "Names",
-			players: '',
-			playerinfo: '',
-			games: ''
-		})
-	});
-
-});
-*/
 // menu page
-app.get('/Main_Menu', function(req, res) {
+app.get('/Projects', function(req, res) {
 	res.render('pages/Main_Menu',{
 		my_title:"Main Menu"
 	});
