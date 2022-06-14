@@ -15,7 +15,7 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node src/server.js",
-        "dev": "nodemon src/server.js"
+        "start": "node Heroku/src/server.js",
+        "dev": "nodemon Heroku/src/server.js"
     }
 }
